@@ -27,7 +27,7 @@ public class FullNameApplication {
         if (initial.isEmpty() && suffix.isEmpty()){
            System.out.print(firstName + " " + lastName);
         }else if (suffix.isEmpty()){
-            System.out.print(firstName+ " "+ initial+ " "+lastName);
+            System.out.print(firstName+ " "+ initial+ ". "+lastName);
         }else{
             System.out.print(firstName + " " + initial + ". " + lastName + ", " + suffix);
         }

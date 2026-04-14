@@ -10,22 +10,26 @@ public class FullNameApplication {
         //Take the users first name as an input
         System.out.print("What is your first? ");
         String firstName = scanner.nextLine();
-        System.out.println(firstName);
 
         //Take the users last name as an input
         System.out.print("What is your last? ");
         String lastName = scanner.nextLine();
-        System.out.println(lastName);
 
         //Takes the Users middle initial
         System.out.print("What is your middle initial? ");
-        char initial = scanner.next().charAt(0);
-        System.out.println(initial);
-        scanner.nextLine();
+        String initial = scanner.nextLine();
 
         //Takes the users suffix
         System.out.print("Enter your preferred suffix: ");
         String suffix = scanner.nextLine();
-        System.out.println(suffix);
+
+        // Name combo possible outcomes
+        if (initial.isEmpty() && suffix.isEmpty()){
+           System.out.print(firstName + " " + lastName);
+        }else if (suffix.isEmpty()){
+            System.out.print(firstName+ " "+ initial+ " "+lastName);
+        }else{
+            System.out.print(firstName + " " + initial + ". " + lastName + ", " + suffix);
+        }
     }
 }
